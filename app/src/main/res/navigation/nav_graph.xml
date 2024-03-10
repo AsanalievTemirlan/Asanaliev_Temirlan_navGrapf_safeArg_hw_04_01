@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/editTextFragment">
+
+    <fragment
+
+        android:id="@+id/editTextFragment"
+        android:name="com.example.navgrapf_safearg_hw_04_01.Ui.Fragment.EditTextFragment"
+        android:label="!!!"
+        tools:layout="@layout/fragment_edit_text" >
+        <action
+            android:id="@+id/action_editTextFragment_to_textViewFragment"
+            app:destination="@id/textViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/textViewFragment"
+        android:name="com.example.navgrapf_safearg_hw_04_01.Ui.Fragment.TextViewFragment"
+        android:label="fragment_text_view"
+        tools:layout="@layout/fragment_text_view" >
+        <action
+            android:id="@+id/action_textViewFragment_to_emptyFragment"
+            app:destination="@id/emptyFragment" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue="Email" />
+        <argument
+            android:name="password"
+            app:argType="string"
+            android:defaultValue="Password" />
+    </fragment>
+    <fragment
+        android:id="@+id/emptyFragment"
+        android:name="com.example.navgrapf_safearg_hw_04_01.Ui.Fragment.EmptyFragment"
+        android:label="fragment_empty"
+        tools:layout="@layout/fragment_empty" />
+</navigation>
