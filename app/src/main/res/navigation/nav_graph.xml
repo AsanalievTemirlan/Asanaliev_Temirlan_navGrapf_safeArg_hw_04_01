@@ -24,13 +24,9 @@
             android:id="@+id/action_textViewFragment_to_emptyFragment"
             app:destination="@id/emptyFragment" />
         <argument
-            android:name="email"
-            app:argType="string"
-            android:defaultValue="Email" />
-        <argument
-            android:name="password"
-            app:argType="string"
-            android:defaultValue="Password" />
+            android:name="User"
+            app:argType="com.example.navgrapf_safearg_hw_04_01.Ui.DataClass.User" />
+
     </fragment>
     <fragment
         android:id="@+id/emptyFragment"

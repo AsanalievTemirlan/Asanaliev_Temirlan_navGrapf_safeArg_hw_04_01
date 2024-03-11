@@ -29,8 +29,8 @@ class TextViewFragment : Fragment() {
     }
 
     private fun getData() {
-        binding.tvEmail.text = args.email
-        binding.tvPassword.text = args.password
+        binding.tvEmail.text = args.User.email
+        binding.tvPassword.text = args.User.password.toString()
     }
 
 }
